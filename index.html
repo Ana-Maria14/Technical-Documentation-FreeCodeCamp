@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main id="main-doc">
+        <div id="nav">
+        <nav id="navbar">
+            <header>JS Documentation</header>
+                <a href="#Variables_and_Data_Types" class="nav-link">Variables and Data Types</a>
+                <a href="#Functions_and_Scope" class="nav-link">Functions and Scope</a>
+                <a href="#Control_Structures_and_Loops" class="nav-link">Control Structures and Loops</a>
+                <a href="#Objects_and_Arrays" class="nav-link">Objects and Arrays</a>
+                <a href="#Asynchronous_JavaScript" class="nav-link">Asynchronous JavaScript</a>
+        </nav></div>
+
+        <div id="text">
+        <section class="main-section" id="Variables_and_Data_Types">
+           <header>Variables and Data Types</header>
+           <p>In JavaScript, variables are used to store data, and the language supports several data types, like:</p>
+            <ul>
+                <li>strings;</li>
+                <li>numbers;</li>
+                <li>booleans;</li>
+                <li>objects;</li>
+                <li>arrays, and more.</li>
+            </ul>
+           <p>Variables can be declared using:</p>
+           <ul>
+             <li>var;</li>
+             <li>let;</li>
+             <li>const;</li>
+           </ul>
+           <p>For example, you can declare a string using let like this:</p>
+            <code>let name = "John";</code>
+            <p>JavaScript's data types include primitives like string, number, and boolean, as well as complex types like object and array. It’s important to note how JavaScript handles type coercion, automatically converting between types when necessary. For instance, <code>"5" + 5</code> results in the string "55" due to type coercion.</p>
+        </section>
+        
+        <section class="main-section" id="Functions_and_Scope">
+           <header>Functions and Scope</header>
+           <p>Functions in JavaScript are blocks of reusable code designed to perform specific tasks. You can declare a function using the function keyword, as shown here:</p>
+           <code>function greet() { console.log("Hello!"); }</code>
+           <p>Functions can also take parameters and return values, allowing them to be highly flexible. Understanding scope is crucial when working with functions. For example, variables declared inside a function using let are only accessible within that function, as in:</p><br>
+           <code>let x = 10; function test() { let y = 20; }</code>
+           <p>Arrow functions provide a more concise way to write functions and have different behavior regarding this. Here’s an example:</p>
+            <code>const add = (a, b) => a + b;</code>
+        </section>
+        
+        <section class="main-section" id="Control_Structures_and_Loops">
+           <header>Control Structures and Loops</header>
+           <p>Control structures like if, else, and switch allow you to control the flow of your code based on conditions. For example, the following code checks if a number is positive:</p>
+           <code>if (number > 0) { console.log("Positive"); }</code>
+           <p>Loops like for, while, and do...while let you repeat code blocks as needed. A for loop, for instance, iterates over a sequence of numbers:</p>
+           <code>for(let i = 0; i<5; i++) {console.log(i);}</code>
+           <p>You can use break to exit a loop early or continue to skip to the next iteration.</p>
+        </section>
+        
+        <section class="main-section" id="Objects_and_Arrays">
+            <header>Objects and Arrays</header>
+            <p>Objects and arrays are fundamental structures in JavaScript for storing collections of data. An object stores data as key-value pairs, like this:
+                <code>let person = { name: "Alice", age: 30 };</code>. You can access the properties of an object using dot notation or bracket notation.</p>
+            <p>Arrays are ordered lists of items, which can be accessed by index. For example,
+                <code>let fruits = ["apple", "banana", "cherry"];</code> creates an array of fruits. JavaScript provides various methods for manipulating arrays, such as
+                <code>fruits.push("orange");</code>, which adds an item to the end of the array.</p>
+        </section>
+        
+        <section class="main-section" id="Asynchronous_JavaScript">
+            <header>Asynchronous JavaScript</header>
+            <p>Asynchronous programming is essential in JavaScript for handling operations that may take time to complete, such as fetching data from an API. One way to handle asynchronous tasks is by using callbacks, where a function is passed as an argument to be executed later, like this:
+                <code>setTimeout(() => { console.log("Done!"); }, 1000);</code>. </p>
+            <p>Promises offer a cleaner way to work with asynchronous operations, with methods like
+                <code>promise.then().catch().finally();</code>. The async/await syntax provides an even more readable approach, allowing you to write asynchronous code that looks synchronous. For instance,
+                <code>async function fetchData() { let response = await fetch(url); }</code> waits for the fetch operation to complete before moving on.</p>
+        </section>
+        
+        </div>
+    </main>
+</body>
+</html>
